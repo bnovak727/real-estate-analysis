@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Bokeh includes-->
+<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.css" type="text/css"/>
+<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+
+</head>
+
+<H1><font face = "Verdana">Redfin Histogram</font></H1>
+
+<form action="/">
+<select name="feature_name">
+	{% for feature in feature_names %}
+		{% if feature == current_feature_name %}
+			<option selected value="{{ feature }}">{{ feature }}</option>
+		{% else %}
+			<option value="{{ feature }}">{{ feature }}</option>
+		{% endif %}
+	{% endfor %}
+</select>
+<input type="submit">
+</form>
+{{ div | safe }}
+{{ script | safe }}
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+from rea.expenses.loan import loan_payment
+
+
+def main():
+    rate = 5.75
+    loan_amount = 165000
+    term = 30
+
+    monthly_payment = loan_payment(rate, term, loan_amount=loan_amount)
+
+    print("Monthly Payment: ${}".format(monthly_payment))
+
+if __name__ == "__main__":
+    main()
